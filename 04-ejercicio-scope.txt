@@ -13,7 +13,14 @@ los objetos de las funciones constructoras  new Foo, new Bar
 La funcion tiene la siguiente firma
 
 function factory(scope,strCtor,...args){
-    //TODO
+    debugger
+    const ctor = scope[strCtor]
+    if(!ctor){
+        throw `el constructor ${strCtor} no existe`
+    }
+    const instance = Object.create(ctor.prototype)
+    ctor.apply(instance, args)
+    return instance
 }
 
 factory(window,"Foo","Pedro") ->new Foo("Pedro")
@@ -22,3 +29,5 @@ factory(window,"Bar","Pedro", "Hurtado") ->new Bar("Pedro","Hurtado")
 1. Reflexion js   foo={id:1} foo.id foo["id"]
 2. Object
 3. Alguno de los operadores del objeto Function, call,bind y apply
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/construct
