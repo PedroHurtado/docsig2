@@ -32,8 +32,9 @@ nodejs->Global
 class Foo{
 
   constructor(){
-    //new Bar(this.writer.bind(this))
-    new Bar(()=>this.writer())  //2 llamadas en el stack
+    //new Bar(this.writer) //perdida de ambito
+    //new Bar(this.writer.bind(this)) //se establece
+    new Bar(()=>this.writer())  //2 llamadas en el stack no se pierde por la funcion flecha
   }
   writer(){
     console.log(this)
