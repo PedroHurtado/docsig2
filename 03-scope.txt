@@ -1,0 +1,73 @@
+1. Al asignar una funcion a un variable se pierde el ambito
+
+var x=10
+var foo = {
+    x:11,
+    write:funcion(){console.log(this.x)}
+}
+foo.write() //11
+var write = window.foo.write;
+write() //10
+
+
+window.x=10
+window.foo = {
+    x:11,
+    write:function(){console.log(this.x)}
+}
+       //this
+window.foo.write() //11
+       //window
+window.write = window.foo.write;  //pierdes el ambito
+//window.write = window.foo.write.bind(window.foo);  //estableces el ambito
+window.write = window.foo.write                   //pierdes el ambito
+       //widow
+window.write() //10
+
+explorador->window
+nodejs->Global
+
+2. Al pasar una funcion como parametro a otra funcion perdemos ambito
+
+class Foo{
+
+  constructor(){
+    //new Bar(this.writer.bind(this))
+    new Bar(()=>this.writer())  //2 llamadas en el stack
+  }
+  writer(){
+    console.log(this)
+  }
+}
+
+class Bar{
+    constructor(writer){
+        writer()    //undefined
+        this.writer = writer;
+        this.writer() //Bar
+    }
+}
+
+//https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+//call y apply
+
+bar = {}
+function foo(lastName,firstName){
+    this.lastName =lastName
+    this.firstName = firstName
+}
+
+foo.call(bar,"Pedro", "Hurtado")
+
+
+bar = {}
+function foo(lastName,firstName){
+    this.lastName =lastName
+    this.firstName = firstName
+}
+
+foo.apply(bar,["Pedro", "Hurtado"])

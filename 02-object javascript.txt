@@ -1,0 +1,51 @@
+//Tipo y el constructor
+//<2015->ES5
+function Foo(name){
+    this.name = name
+}
+//metodo publico
+Foo.prototype.write = function(){
+    this._write()
+}
+//metodo privado
+Foo.prototype._write = function(){
+    console.log(this.name)
+}
+
+Foo.write = function(){
+    console.log("static method")
+}
+>2015->ES6
+//azucar sintactico
+class Foo{
+    constructor(name){
+        this.name = name
+    }
+    _write(){
+        console.log(this.name)
+    }
+    write(){
+        this._write()
+    }
+    static write(){
+        console.log("static method")
+    }
+}
+
+//Transpilacion
+/*
+    Babel->React,Vue
+    TypeScript->Microsoft
+
+*/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+https://github.com/tc39/ecma262
+https://developer.mozilla.org/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
+
+function sum(a,b){
+    return a+b
+}
+
+diferencias null vs undefined

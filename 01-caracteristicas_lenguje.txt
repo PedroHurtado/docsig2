@@ -1,0 +1,17 @@
+1. Debilmente tipado
+
+    a=1->inferencia de tipos
+    typeof(a)->number
+    a="Hello"
+    typeof(a)->string
+
+    var a=1  java
+    var a=1 c#
+    auto a=1 c++
+2. dimamico
+    var foo = {id:1}
+    foo.name="Pedro"
+3. [1,2,3].map(v=>v*v)->[1,4,9]
+4. JavaScript es orientado a objetos
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+5. En un lenguaje de proposito general
