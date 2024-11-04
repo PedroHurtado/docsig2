@@ -1,0 +1,7 @@
+1. array,diccionarios,hasset
+2. mixins
+3. callback,clousures,generator
+4. True False
+5. Azucar sintactico (rest,spread,etc...)
+6. Código asincrono->callback,promises,async await
+7. modules
