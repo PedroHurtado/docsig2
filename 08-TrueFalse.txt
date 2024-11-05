@@ -1,0 +1,27 @@
+False
+    0->false
+    ''->false
+    undefined
+    null
+    false
+
+while(a===null){ //mala practica
+
+}
+do{
+
+}while(a)
+
+if(a){
+
+}
+
+//True
+!0
+!''
+!undefined
+!null
+true
+
+1=='1' //true
+1==='1' //false
