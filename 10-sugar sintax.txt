@@ -1,0 +1,103 @@
+java
+
+class Foo{
+    private String name;
+    public Foo(String name){
+        this.name = name
+    }
+    public String getName(){
+        return name
+    }
+    public String setName(String value){
+        name = value
+    }
+}
+
+c#
+
+class Foo{
+    public string Name {get;set;}
+    public Foo(string name){
+        Name = name
+    }
+}
+
+https://es.wikipedia.org/wiki/Az%C3%BAcar_sint%C3%A1ctico
+
+1. Rest Parameters
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+    function foo(...args){
+
+    }
+
+    1. Debe de haber un solo rest parameters y tiene el último
+2. default parameters
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+    funcion sum(a,b=5){
+        return a+b
+    }
+
+    sum(3) //8
+    sum(3,10) //13
+
+    Puedo tener varios default parameters pero al final
+    de la definicion
+3. Desectructuring
+
+    https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+    a=[1,2,3]
+    b=a[0]->1
+    c=a[1]->2
+
+    const [b,c] = a
+
+    const {id,name} = {id:1,name:'pedro',phone:12564555}
+    id->1
+    name->pedro
+
+    const {id,name,...rest} = {id:1,name:'pedro',phone:12564555}
+
+    rest = {phone:12564555}
+4. Spread
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+    const a = [1,2,3]
+    const b= [4,5,6]
+    const c=[...a,...b]
+
+    //object
+
+    const foo = {id:1,name:'pedro'}
+    const bar  = {name:'pedro hurtado'}
+
+    const result = {...foo, ...bar}
+
+    const foo= {id:1,bar:{id:1}}
+
+    https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone
+
+    const result = structuredClone(foo)
+    //clonar en profundidad
+
+5. Operadores de cortocircuito
+
+    if(a){
+        a()
+    }
+
+    a && a()   //prevenir el uso d undefined
+
+
+    const result = Base || class {} -> evitar que el result sea undefined
+6 Optional Chaining
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+    
