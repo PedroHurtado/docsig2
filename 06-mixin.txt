@@ -1,0 +1,7 @@
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes#mix-ins
+
+Ventajas
+    Ahorra en determinarios escenarios de testing y copy paste
+Contras
+    Posibles problemas de performance por el descubrimiento de metodos
+    Posibles colisiones de nombres

@@ -1,0 +1,39 @@
+const a=[1,2,3]
+const b=[1,"Hello",3]
+
+1. Estan basadas en indice 0
+    a[0]->1
+    a[1]->2
+    a[2]->3
+    a[4]->undefined
+
+a.filter(v=>v%2===0)->[2]
+a.find(v=>v%2===0)->2
+a.findLast(v=>v%2===0)->2
+a.map(v=>v*v)->[1,4,9]
+a.sort()
+a.reduce((a,v)=>a+v,0)->sum,min,max,count
+    0+1=1
+    1+2=3
+    3+3=6->6
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos_de_instancia
+
+
+Diccionario
+
+const map = new Map()
+Key,Value
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+Set
+
+Eliminar duplicadas
+
+const set = new Set([1,2,3,4,3,2,6])
+
+Set(5) {1, 2, 3, 4, 6}
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set
+https://github.com/tc39/proposal-set-methods
