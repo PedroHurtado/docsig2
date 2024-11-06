@@ -1,5 +1,6 @@
 !function menu(){
     //Event Delegacion
+    //https://dmitripavlutin.com/javascript-event-delegation/
     //capture->x,y->interseccion rect
     //target->el elemento cuyo rectangulo hace interseccion con el punto(x,y)
     //bubble->capture
