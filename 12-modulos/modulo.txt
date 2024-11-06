@@ -1,0 +1,25 @@
+Modulo
+
+Es un archivo js con funciones, variables, constantes, clasess
+,son privadas al archivo excepto que se exporten
+
+    module.js
+        export const a=1
+    main.js
+        import {a} from './module.js'
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
+
+    script.js var a=1
+    script1.js var a=11
+
+    iief->browser,worker,node
+    system->cargador
+    amd->cargador
+    cjs->node
+    umd->browser,node->iief
+
+    !function(){
+        var a =1
+    }()
