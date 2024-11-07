@@ -1,0 +1,12 @@
+1.Dto->Interface(No trabajes con dtos y genera interfaces)
+    la interface no es soportada por js->no se transpila
+    conseguir que la firma de un metodo cumpla con la interface
+
+2. Generic
+    Template que en el momento de la ejecucion se sustituyen por un tipo
+    //https://www.typescriptlang.org/docs/handbook/2/generics.html
+3. mixin
+    https://www.typescriptlang.org/docs/handbook/mixins.html
+4. POA(Programación a aspectos dentro de ts)
+    https://github.com/tc39/proposal-decorators
+    https://www.typescriptlang.org/docs/handbook/decorators.html
